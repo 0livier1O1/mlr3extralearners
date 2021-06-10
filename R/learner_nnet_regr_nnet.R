@@ -96,7 +96,7 @@ LearnerRegrNnet = R6Class("LearnerRegrNnet",
       newdata = task$data(cols = self$state$feature_names)
 
       response = mlr3misc::invoke(predict, self$model, newdata = newdata,
-                              type = 'class', .args = pars)
+                              type = 'raw', .args = pars)
 
       return(list(response = response))
     }
